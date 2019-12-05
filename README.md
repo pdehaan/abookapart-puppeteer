@@ -27,3 +27,16 @@ Finally, run the reporter with whatever result you're trying to run:
 ```sh
 npm run report
 ```
+
+## OUTPUT
+
+```
+[#000001] Accessibility for Everyone - ebook
+[#000002] Animation at Work - ebook
+[#000003] Color Accessibility Workflows - ebook
+[#000004] Content Strategy for Mobile - ebook
+[#000005] Design Is a Job - ebook
+[#000006] Designing for Emotion & Mobile First Bundle - ebook bundle
+[#000007] Everyday Information Architecture - ebook
+[#000008] Get Ready for CSS Grid Layout - ebook
+```
