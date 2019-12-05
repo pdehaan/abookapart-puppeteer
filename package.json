@@ -1,0 +1,27 @@
+{
+  "name": "abookapart-puppeteer",
+  "description": "Scrape all your order information from abookapart.com.",
+  "version": "1.0.0",
+  "author": "Peter deHaan <peter@deseloper.com> (https://about.me/peterdehaan)",
+  "bugs": {
+    "url": "https://github.com/pdehaan/abookapart-puppeteer/issues"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "puppeteer": "^2.0.0"
+  },
+  "devDependencies": {},
+  "homepage": "https://github.com/pdehaan/abookapart-puppeteer#readme",
+  "keywords": ["abookapart", "puppeteer"],
+  "license": "MPL-2.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pdehaan/abookapart-puppeteer.git"
+  },
+  "scripts": {
+    "report": "node report",
+    "scrape": "node index > orders.json",
+    "start": "npm run scrape && npm run report"
+  }
+}
