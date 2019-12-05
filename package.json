@@ -1,7 +1,7 @@
 {
   "name": "abookapart-puppeteer",
   "description": "Scrape all your order information from abookapart.com.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Peter deHaan <peter@deseloper.com> (https://about.me/peterdehaan)",
   "bugs": {
     "url": "https://github.com/pdehaan/abookapart-puppeteer/issues"
@@ -20,6 +20,7 @@
     "url": "git+https://github.com/pdehaan/abookapart-puppeteer.git"
   },
   "scripts": {
+    "format": "npx prettier *.js --write",
     "report": "node report",
     "scrape": "node index > orders.json",
     "start": "npm run scrape && npm run report"
