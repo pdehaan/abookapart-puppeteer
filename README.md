@@ -16,6 +16,8 @@ ABA_EMAIL="__YOUR_EMAIL_HERE__"
 ABA_PASSWORD="__YOUR_PASSWORD_HERE__"
 ```
 
+**NOTE:** You can also specify an `EMAIL=` and `PASSWORD=` on the command line, <kbd>EMAIL="__YOUR_EMAIL_HERE__" PASSWORD="__YOUR_PASSWORD_HERE__" npm run scrape</kbd>.
+
 Next, we'll scrape our orders and cache the data into an "orders.json" file for parsing. This way we don't need to constantly rescrape the server for order information if you want to do multiple queries of the data.
 
 ```sh

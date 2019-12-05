@@ -1,7 +1,6 @@
-const dotenv = require("dotenv");
 const puppeteer = require("puppeteer");
 
-dotenv.config();
+const config = require("./config");
 
 module.exports = {
   scrape
@@ -9,7 +8,7 @@ module.exports = {
 
 class Page {
   constructor() {
-    this._email = process.env.ABA_EMAIL;
+    this._email = config.get("email");
   }
 
   /**
@@ -37,15 +36,16 @@ class Page {
    * `ABA_PASSWORD` environment variables.
    */
   async signIn(credentials = {}) {
+    const email = credentials.email || config.get("email");
+    const password = credentials.password || config.get("password");
+
+    if (!email || !password) {
+      throw new Error("Missing email and/or password.");
+    }
+
     await this._page.goto("https://abookapart.com/account/login");
-    await this._page.type(
-      "#customer_email",
-      credentials.email || process.env.ABA_EMAIL
-    );
-    await this._page.type(
-      "#customer_password",
-      credentials.password || process.env.ABA_PASSWORD
-    );
+    await this._page.type("#customer_email", email);
+    await this._page.type("#customer_password", password);
     await this._page.click("input[type='submit'");
   }
 

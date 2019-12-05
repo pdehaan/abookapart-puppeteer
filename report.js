@@ -1,14 +1,16 @@
 const orders = require("./orders.json");
 
 const products = orders
-  .reduce((acc, order) => {
+  .reduce((acc = [], order = {}) => {
     const productArr = order.products.map(product => {
-      product.orderId = order.orderId;
-      product.orderHref = order.href;
-      return product;
+      // Inject the order's `orderId` and `href` into the product details.
+      return {
+        ...product,
+        orderId: order.orderId,
+        orderHref: order.href
+      };
     });
-    acc.push(productArr);
-    return acc;
+    return acc.concat(productArr);
   }, [])
   .flat()
   .sort((orderA, orderB) => {
