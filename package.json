@@ -7,7 +7,7 @@
     "url": "https://github.com/pdehaan/abookapart-puppeteer/issues"
   },
   "dependencies": {
-    "convict": "^5.2.0",
+    "convict": "^6.2.3",
     "dotenv": "^8.2.0",
     "puppeteer": "^2.0.0"
   },
